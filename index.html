@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raza Enterprises provides the best interior design services in Pune, Dhanori, and surrounding areas. We specialize in luxury residential, commercial, and turnkey interior projects with our in-house factory.">
+    <meta name="keywords" content="Interiors Near me, Best Interiors In Pune, Best Interiors In Dhanori, Interior Designers in Pune, Luxury Home Interiors, Commercial Interior Design, Turnkey Interior Projects, Raza Enterprises, Home Decor, Best Interior Decorators, Interior Design Company">
+    <meta name="author" content="Raza Enterprises">
+    <title>Raza Enterprises | Interior Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6F61', // Vibrant Coral like Bonito
+                        dark: '#2d1e1c',
+                        light: '#FBF3DC', // Warm beige
+                        gold: '#D4AF37'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FBF3DC; color: #2d1e1c; overflow-x: hidden; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Playfair Display', serif; }
+        
+        .hero-video-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .hero-video-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+
+        .hero-video-placeholder {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        
+        .reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        /* Horizontal Scroll Section */
+        .projects-wrapper {
+            width: 300vw;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .project-panel {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.jpg" alt="Raza Enterprises" class="h-12 w-12 rounded-full object-cover border-2 border-gold shadow-lg">
+                <span class="text-white font-heading font-bold text-2xl tracking-wide">Raza Enterprises</span>
+            </a>
+            <nav class="hidden md:flex gap-8 text-white font-medium">
+                <a href="index.html" class="text-primary transition-colors">Home</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+                <a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-red-500 transition-colors hidden md:block">Consult Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-video-container flex items-center justify-center relative">
+        <video autoplay loop muted playsinline class="hero-video-placeholder">
+            <source src="hero-video.webm" type="video/webm">
+        </video>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl">
+            <h1 class="text-5xl md:text-7xl text-white font-heading mb-6 reveal-text hero-title">
+                Crafting Spaces That <br> <span class="text-primary italic">Live Beautifully</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 hero-subtitle font-light">
+                Residential, Commercial & Turnkey Projects. Powered by our in-house factory & perfect materials.
+            </p>
+            <div class="hero-btn opacity-0 translate-y-4">
+                <a href="#explore" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-primary transition-all duration-300 inline-block shadow-lg">
+                    Discover Our Vision
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="explore" class="py-24 bg-dark text-light relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 section-title">
+                <h2 class="text-4xl md:text-5xl font-heading mb-4">Why Homeowners Choose Us</h2>
+                <p class="text-lg opacity-80 max-w-2xl mx-auto">India's leading full-home and commercial interior brand, executing flawlessly with our massive in-house factory.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item p-6 rounded-3xl bg-[#3f2b29]">
+                    <h3 class="text-4xl md:text-5xl font-heading text-primary mb-2 stat-num" data-val="15000">0</h3>
+                    <p class="font-medium opacity-90">Homes Designed</p>
+                </div>
+                <div class="stat-item p-6 rounded-3xl bg-[#3f2b29]">
+                    <h3 class="text-4xl md:text-5xl font-heading text-primary mb-2 stat-num" data-val="10">0</h3>
+                    <p class="font-medium opacity-90">Million+ Sq Ft</p>
+                </div>
+                <div class="stat-item p-6 rounded-3xl bg-[#3f2b29]">
+                    <h3 class="text-4xl md:text-5xl font-heading text-primary mb-2 stat-num" data-val="15">0</h3>
+                    <p class="font-medium opacity-90">Years Experience</p>
+                </div>
+                <div class="stat-item p-6 rounded-3xl bg-[#3f2b29]">
+                    <h3 class="text-4xl md:text-5xl font-heading text-primary mb-2">100%</h3>
+                    <p class="font-medium opacity-90">In-House Production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 service-img-container">
+                    <div class="rounded-[2rem] overflow-hidden shadow-2xl relative h-[600px]">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover service-img" alt="Luxury Living Room">
+                    </div>
+                </div>
+                <div class="md:w-1/2 service-text">
+                    <h2 class="text-4xl md:text-5xl font-heading text-dark mb-6">Mastery Across Every Domain</h2>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        From luxury residential havens to functional commercial workspaces, we bring a vibrant and dynamic approach to every project. With our turnkey solutions, you get a seamless experience from blueprint to handover.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="text-primary font-bold text-xl">1</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-heading font-semibold text-dark">Residential Interiors</h4>
+                                <p class="text-gray-600 mt-1">Bespoke living spaces that reflect your personality and style.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="text-primary font-bold text-xl">2</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-heading font-semibold text-dark">Commercial Spaces</h4>
+                                <p class="text-gray-600 mt-1">Inspiring workspaces engineered for productivity and brand impact.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                                <span class="text-primary font-bold text-xl">3</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-heading font-semibold text-dark">Turnkey Execution</h4>
+                                <p class="text-gray-600 mt-1">End-to-end delivery with our in-house factory ensuring perfect materials.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Scrolling Projects Gallery -->
+    <section class="overflow-hidden bg-dark text-white relative" id="projects-section">
+        <div class="absolute top-10 left-10 z-10 gallery-title">
+            <h2 class="text-4xl md:text-5xl font-heading text-white">Signature Projects</h2>
+            <p class="text-gray-400 mt-2">Scroll to explore our masterpiece creations.</p>
+        </div>
+        <div class="projects-wrapper">
+            <!-- Project 1 -->
+            <div class="project-panel">
+                <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1920&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Project 1">
+                <div class="relative z-10 text-center max-w-2xl px-6 project-content">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Residential</span>
+                    <h3 class="text-5xl md:text-7xl font-heading mb-4">The Oasis Villa</h3>
+                    <p class="text-xl text-gray-200">A seamless blend of modern luxury and organic warmth.</p>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-panel">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Project 2">
+                <div class="relative z-10 text-center max-w-2xl px-6 project-content">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Commercial</span>
+                    <h3 class="text-5xl md:text-7xl font-heading mb-4">TechHub HQ</h3>
+                    <p class="text-xl text-gray-200">Inspiring productivity through dynamic, open-concept design.</p>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-panel">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Project 3">
+                <div class="relative z-10 text-center max-w-2xl px-6 project-content">
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Turnkey</span>
+                    <h3 class="text-5xl md:text-7xl font-heading mb-4">The Grand Lounge</h3>
+                    <p class="text-xl text-gray-200">Executed perfectly from factory floor to grand opening.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-[#f8efd8] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 testimonial-header">
+                <h2 class="text-4xl md:text-5xl font-heading mb-4 text-dark">Client Stories</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="testimonial-card bg-white p-10 rounded-[2rem] relative mt-10">
+                    <div class="absolute -top-8 left-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-4xl font-heading shadow-lg">"</div>
+                    <p class="text-gray-700 italic mb-6 mt-4">"The factory-to-home model changed everything. No delays, perfect finishing, and the vibrant design completely transformed our living space."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-dark">Ayesha Khan</h5>
+                            <span class="text-sm text-gray-500">Residential Client</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="testimonial-card bg-white p-10 rounded-[2rem] relative mt-10">
+                    <div class="absolute -top-8 left-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-4xl font-heading shadow-lg">"</div>
+                    <p class="text-gray-700 italic mb-6 mt-4">"Raza Enterprises executed our entire office space flawlessly. Their attention to detail and turnkey delivery meant we opened on schedule."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-dark">Rohan Sharma</h5>
+                            <span class="text-sm text-gray-500">Commercial Client</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="testimonial-card bg-white p-10 rounded-[2rem] relative mt-10">
+                    <div class="absolute -top-8 left-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-4xl font-heading shadow-lg">"</div>
+                    <p class="text-gray-700 italic mb-6 mt-4">"Working with Saddam Rahmani's team was a breeze. They understood our vision and the material quality from their factory is truly premium."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-dark">Priya Patel</h5>
+                            <span class="text-sm text-gray-500">Turnkey Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factory CTA -->
+    <section class="py-24 bg-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1565626423126-788df0a196ce?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-heading mb-6 factory-title">Precision from our Factory to Your Home</h2>
+            <p class="text-xl md:text-2xl opacity-90 mb-10 font-light factory-text">
+                No middlemen. No compromises. We build every piece of furniture in our state-of-the-art facility using only perfect materials.
+            </p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-dark hover:text-white transition-all duration-300 shadow-xl inline-block factory-btn">
+                Visit Our Office
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="logo.jpg" alt="Raza Enterprises" class="h-10 w-10 rounded-full">
+                    <span class="text-white font-heading font-bold text-xl">Raza Enterprises</span>
+                </div>
+                <p class="mb-4">Bringing vibrant, personalized, and meticulously crafted interiors to life.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Explore</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li>info@razaenterprises.com</li>
+                    <li>+91 98765 43210</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-dark/90', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('bg-dark/90', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                header.classList.add('py-4');
+            }
+        });
+
+        // Hero Animations
+        const tl = gsap.timeline();
+        tl.from(".hero-title", { y: 100, opacity: 0, duration: 1.2, ease: "power4.out", delay: 0.2 })
+          .from(".hero-subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+          .to(".hero-btn", { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, "-=0.6");
+
+        // Stats Counter Animation
+        gsap.utils.toArray('.stat-item').forEach(item => {
+            gsap.from(item, {
+                scrollTrigger: { trigger: "#explore", start: "top 80%" },
+                y: 50, opacity: 0, duration: 0.8, stagger: 0.2, ease: "back.out(1.7)"
+            });
+        });
+
+        // Animate numbers
+        ScrollTrigger.create({
+            trigger: "#explore",
+            start: "top 75%",
+            onEnter: () => {
+                gsap.utils.toArray('.stat-num').forEach(num => {
+                    const target = parseInt(num.getAttribute('data-val'));
+                    gsap.to(num, {
+                        innerHTML: target, duration: 2, snap: { innerHTML: 1 }, ease: "power2.out",
+                        onUpdate: function() {
+                            num.innerHTML = Math.round(this.targets()[0].innerHTML) + (target === 15 || target === 15000 ? '+' : '');
+                        }
+                    });
+                });
+            },
+            once: true
+        });
+
+        // Services Section
+        gsap.from(".service-img-container", {
+            scrollTrigger: { trigger: ".service-img-container", start: "top 75%" },
+            x: -50, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+        gsap.from(".service-text > *", {
+            scrollTrigger: { trigger: ".service-text", start: "top 75%" },
+            x: 50, opacity: 0, duration: 1, stagger: 0.2, ease: "power3.out"
+        });
+        gsap.to(".service-img", {
+            scrollTrigger: { trigger: ".service-img-container", start: "top bottom", end: "bottom top", scrub: true },
+            y: 50, scale: 1.1
+        });
+
+        // Horizontal Scroll for Projects
+        const projectsWrapper = document.querySelector('.projects-wrapper');
+        const getScrollAmount = () => -(projectsWrapper.scrollWidth - window.innerWidth);
+        
+        gsap.to(projectsWrapper, {
+            x: getScrollAmount,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#projects-section",
+                start: "top top",
+                end: () => `+=${getScrollAmount() * -1}`,
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true
+            }
+        });
+
+        gsap.utils.toArray('.project-content').forEach(content => {
+            gsap.from(content, {
+                opacity: 0, y: 50, duration: 1,
+                scrollTrigger: {
+                    trigger: content, containerAnimation: gsap.getById("projects-section"),
+                    start: "left center", toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+        // Testimonials
+        gsap.from(".testimonial-header", {
+            scrollTrigger: { trigger: ".testimonial-header", start: "top 85%" },
+            y: 40, opacity: 0, duration: 1
+        });
+        gsap.from(".testimonial-card", {
+            scrollTrigger: { trigger: ".testimonial-card", start: "top 80%" },
+            y: 60, opacity: 0, duration: 0.8, stagger: 0.2, ease: "back.out(1.5)"
+        });
+
+        // Factory CTA
+        gsap.from(".factory-title", { scrollTrigger: { trigger: ".factory-title", start: "top 85%" }, y: 40, opacity: 0, duration: 1 });
+        gsap.from(".factory-text", { scrollTrigger: { trigger: ".factory-text", start: "top 85%" }, y: 40, opacity: 0, duration: 1, delay: 0.2 });
+        gsap.from(".factory-btn", { scrollTrigger: { trigger: ".factory-btn", start: "top 85%" }, y: 40, opacity: 0, duration: 1, delay: 0.4 });
+    </script>
+</body>
+</html>

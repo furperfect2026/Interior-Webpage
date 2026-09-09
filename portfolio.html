@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raza Enterprises provides the best interior design services in Pune, Dhanori, and surrounding areas. We specialize in luxury residential, commercial, and turnkey interior projects with our in-house factory.">
+    <meta name="keywords" content="Interiors Near me, Best Interiors In Pune, Best Interiors In Dhanori, Interior Designers in Pune, Luxury Home Interiors, Commercial Interior Design, Turnkey Interior Projects, Raza Enterprises, Home Decor, Best Interior Decorators, Interior Design Company">
+    <meta name="author" content="Raza Enterprises">
+    <title>Portfolio | Raza Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6F61',
+                        dark: '#2d1e1c',
+                        light: '#FBF3DC',
+                        gold: '#D4AF37'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FBF3DC; color: #2d1e1c; overflow-x: hidden; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg {
+            background: linear-gradient(to right, rgba(45, 30, 28, 0.9), rgba(45, 30, 28, 0.7)), url('https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=2000&auto=format&fit=crop') center/cover;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        .portfolio-item img {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(45, 30, 28, 0.9), transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .filter-btn.active {
+            background-color: #FF6F61;
+            color: white;
+            border-color: #FF6F61;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-dark/90 backdrop-blur-md shadow-md py-2" id="header">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.jpg" alt="Raza Enterprises" class="h-12 w-12 rounded-full object-cover border-2 border-gold shadow-lg">
+                <span class="text-white font-heading font-bold text-2xl tracking-wide">Raza Enterprises</span>
+            </a>
+            <nav class="hidden md:flex gap-8 text-white font-medium">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+                <a href="portfolio.html" class="text-primary transition-colors">Portfolio</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-red-500 transition-colors hidden md:block">Consult Now</a>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero-bg pt-40 pb-32 text-center text-white relative">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 animate-fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-heading mb-6 page-title">Our <span class="text-primary italic">Masterpieces</span></h1>
+            <p class="text-xl md:text-2xl text-gray-200 font-light page-subtitle">
+                Explore a curated collection of our finest residential, commercial, and turnkey projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="py-24 bg-light min-h-screen">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 filter-container">
+                <button class="filter-btn active px-6 py-2 rounded-full border border-dark text-dark font-medium transition-colors" data-filter="all">All Projects</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-dark text-dark font-medium hover:bg-primary/10 transition-colors" data-filter="residential">Residential</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-dark text-dark font-medium hover:bg-primary/10 transition-colors" data-filter="commercial">Commercial</button>
+                <button class="filter-btn px-6 py-2 rounded-full border border-dark text-dark font-medium hover:bg-primary/10 transition-colors" data-filter="turnkey">Turnkey Execution</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery">
+                <!-- Item 1 -->
+                <div class="portfolio-item h-[400px] filter-item residential">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Luxury Living Room">
+                    <div class="portfolio-overlay">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Residential</span>
+                        <h3 class="text-white text-2xl font-heading">The Skyline Penthouse</h3>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="portfolio-item h-[400px] filter-item commercial">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Modern Office">
+                    <div class="portfolio-overlay">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Commercial</span>
+                        <h3 class="text-white text-2xl font-heading">TechHub Workspace</h3>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="portfolio-item h-[400px] filter-item turnkey lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Hotel Lounge">
+                    <div class="portfolio-overlay">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Turnkey Execution</span>
+                        <h3 class="text-white text-2xl font-heading">Grand Hotel Lobby</h3>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="portfolio-item h-[400px] filter-item residential lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b46a0eb?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Minimalist Bedroom">
+                    <div class="portfolio-overlay">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Residential</span>
+                        <h3 class="text-white text-2xl font-heading">Serenity Bedroom Suite</h3>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="portfolio-item h-[400px] filter-item commercial">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Restaurant Interior">
+                    <div class="portfolio-overlay">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Commercial</span>
+                        <h3 class="text-white text-2xl font-heading">Bistro 1920</h3>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="portfolio-item h-[400px] filter-item turnkey">
+                    <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Modern Kitchen">
+                    <div class="portfolio-overlay">
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Turnkey Execution</span>
+                        <h3 class="text-white text-2xl font-heading">Culinary Studio</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="logo.jpg" alt="Raza Enterprises" class="h-10 w-10 rounded-full">
+                    <span class="text-white font-heading font-bold text-xl">Raza Enterprises</span>
+                </div>
+                <p class="mb-4">Bringing vibrant, personalized, and meticulously crafted interiors to life.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Explore</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li>info@razaenterprises.com</li>
+                    <li>+91 98765 43210</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Page Hero Animations
+        gsap.from(".page-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
+        gsap.from(".page-subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.4 });
+
+        // Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.filter-item');
+
+        // Animate initial load
+        gsap.from(".filter-item", {
+            y: 40, opacity: 0, duration: 0.8, stagger: 0.1, ease: "power2.out", delay: 0.6
+        });
+        gsap.from(".filter-container", { y: 20, opacity: 0, duration: 0.8, delay: 0.4 });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active class
+                filterBtns.forEach(b => b.classList.remove('active', 'hover:bg-primary/10'));
+                filterBtns.forEach(b => b.classList.add('hover:bg-primary/10'));
+                btn.classList.add('active');
+                btn.classList.remove('hover:bg-primary/10');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Animate out
+                gsap.to(items, {
+                    scale: 0.9, opacity: 0, duration: 0.3,
+                    onComplete: () => {
+                        items.forEach(item => {
+                            if (filter === 'all' || item.classList.contains(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                        // Animate in
+                        gsap.to(items, {
+                            scale: 1, opacity: 1, duration: 0.4, stagger: 0.05, clearProps: "all"
+                        });
+                        ScrollTrigger.refresh();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
