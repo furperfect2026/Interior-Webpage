@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raza Enterprises provides the best interior design services in Pune, Dhanori, and surrounding areas. We specialize in luxury residential, commercial, and turnkey interior projects with our in-house factory.">
+    <meta name="keywords" content="Interiors Near me, Best Interiors In Pune, Best Interiors In Dhanori, Interior Designers in Pune, Luxury Home Interiors, Commercial Interior Design, Turnkey Interior Projects, Raza Enterprises, Home Decor, Best Interior Decorators, Interior Design Company, 2 BHK interior design cost in Pune, factory made furniture Pune, turnkey contractors Dhanori">
+    <meta name="author" content="Raza Enterprises">
+    <title>FAQ & Local Insights | Raza Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6F61',
+                        dark: '#2d1e1c',
+                        light: '#FBF3DC',
+                        gold: '#D4AF37'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FBF3DC; color: #2d1e1c; overflow-x: hidden; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg {
+            background: linear-gradient(to right, rgba(45, 30, 28, 0.9), rgba(45, 30, 28, 0.7)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop') center/cover;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(45, 30, 28, 0.1);
+        }
+        .faq-question {
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-dark/90 backdrop-blur-md shadow-md py-2" id="header">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.jpg" alt="Raza Enterprises" class="h-12 w-12 rounded-full object-cover border-2 border-gold shadow-lg">
+                <span class="text-white font-heading font-bold text-2xl tracking-wide">Raza Enterprises</span>
+            </a>
+            <nav class="hidden md:flex gap-8 text-white font-medium">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+                <a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a>
+                <a href="faq.html" class="text-primary transition-colors">FAQ</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-red-500 transition-colors hidden md:block">Consult Now</a>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero-bg pt-40 pb-32 text-center text-white relative">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 animate-fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-heading mb-6 page-title">Frequently Asked <span class="text-primary italic">Questions</span></h1>
+            <p class="text-xl md:text-2xl text-gray-200 font-light page-subtitle">
+                Insights on interior costs, timelines, and design trends for Pune and Dhanori.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-light">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="text-center mb-16 faq-header">
+                <h2 class="text-4xl font-heading text-dark mb-4">Interior Design Queries in Pune</h2>
+                <p class="text-lg text-gray-700">Everything you need to know before starting your dream home or commercial space.</p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item py-6 bg-white px-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
+                        <h3 class="text-xl font-heading font-semibold text-dark">What is the average 2 BHK interior design cost in Pune?</h3>
+                        <svg class="w-6 h-6 text-primary faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-600 leading-relaxed">
+                        <p>The interior design cost in Pune generally starts around ₹1,200 - ₹1,650 per sq. ft. for budget finishes, while premium luxury bespoke interiors can range from ₹3,000 to over ₹5,500 per sq. ft.</p>
+                        <p class="mt-2">For a standard 2 BHK in areas like Dhanori or Viman Nagar, comprehensive turnkey interiors typically range between ₹5 Lakhs to ₹12 Lakhs, depending on materials, smart home integration, and custom factory-made modular fittings.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item py-6 bg-white px-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
+                        <h3 class="text-xl font-heading font-semibold text-dark">Why choose factory-made furniture over local carpenters?</h3>
+                        <svg class="w-6 h-6 text-primary faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-600 leading-relaxed">
+                        <p>At Raza Enterprises, our 100% in-house factory ensures precision manufacturing. Factory-made interiors offer superior edge-banding, perfect alignment, premium machine finishes, and significantly faster delivery times compared to traditional on-site carpentry.</p>
+                        <p class="mt-2">This eliminates the mess, noise, and hidden costs commonly associated with local carpenters, ensuring your home in Pune gets a flawless, modern finish.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item py-6 bg-white px-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
+                        <h3 class="text-xl font-heading font-semibold text-dark">What are the trending interior design styles in Dhanori and Pune?</h3>
+                        <svg class="w-6 h-6 text-primary faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-600 leading-relaxed">
+                        <p>Homeowners in Pune are actively searching for "biophilic design" (bringing nature indoors with terracotta and oak wood tones), smart home automation, and "fusion decor" which blends traditional Indian aesthetics with sleek modern minimalism. Vibrant, expressive colors are also making a major comeback.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item py-6 bg-white px-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(this)">
+                        <h3 class="text-xl font-heading font-semibold text-dark">What is included in a Turnkey Interior Contract?</h3>
+                        <svg class="w-6 h-6 text-primary faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-600 leading-relaxed">
+                        <p>A turnkey project means we handle absolutely everything from bare shell to final handover. This includes 3D space planning, civil work, false ceilings, plumbing, electricals, custom factory furniture, painting, and deep cleaning. You simply unlock the door and move in.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="logo.jpg" alt="Raza Enterprises" class="h-10 w-10 rounded-full">
+                    <span class="text-white font-heading font-bold text-xl">Raza Enterprises</span>
+                </div>
+                <p class="mb-4">Bringing vibrant, personalized, and meticulously crafted interiors to life in Pune.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Explore</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li>info@razaenterprises.com</li>
+                    <li>+91 98765 43210</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Hero Animations
+        gsap.from(".page-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
+        gsap.from(".page-subtitle", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.4 });
+
+        // FAQ Animation
+        gsap.from(".faq-header", { y: 30, opacity: 0, duration: 1, ease: "power3.out", delay: 0.6 });
+        gsap.from(".faq-item", { y: 40, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power2.out", delay: 0.8 });
+
+        // Accordion functionality
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = element.nextElementSibling;
+            const allItems = document.querySelectorAll('.faq-item');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+
+            // If clicking the active one, just close it
+            if (item.classList.contains('active')) {
+                gsap.to(answer, { height: 0, opacity: 0, duration: 0.3, onComplete: () => {
+                    answer.style.display = 'none';
+                    item.classList.remove('active');
+                }});
+                return;
+            }
+
+            // Close all others
+            allAnswers.forEach((ans, i) => {
+                if (allItems[i].classList.contains('active')) {
+                    gsap.to(ans, { height: 0, opacity: 0, duration: 0.3, onComplete: () => {
+                        ans.style.display = 'none';
+                        allItems[i].classList.remove('active');
+                    }});
+                }
+            });
+
+            // Open clicked
+            answer.style.display = 'block';
+            gsap.fromTo(answer, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.4, ease: "power2.out" });
+            item.classList.add('active');
+        }
+    </script>
+</body>
+</html>
